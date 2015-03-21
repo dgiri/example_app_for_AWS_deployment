@@ -15,7 +15,7 @@ production:
   encoding: utf8
   database: blog_production
   username: blogappadmin
-  host: yourins.mydnsnameexample.rds.amazonaws.com
+  host: blogapp.cy4y7i7flyo8.us-west-2.rds.amazonaws.com
   password: Begampur83!
   port: 5432
   pool: 5
