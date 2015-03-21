@@ -4,11 +4,19 @@ development: &DEFAULTS
     reconnect: false
     database: blog_development
     host: localhost
-    username: tiatrosdev
+    username: root
     min_messages: WARNING
     template: template0
     port: 5432
 
+
 production:
-  <<: *DEFAULTS
+  adapter: postgresql
+  encoding: utf8
   database: blog_production
+  username: blogappadmin
+  host: yourins.mydnsnameexample.rds.amazonaws.com
+  password: Begampur83!
+  port: 5432
+  pool: 5
+  timeout: 5000
