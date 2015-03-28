@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
   <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="blog-masthead">
+    <div class="container">
+      <nav class="blog-nav">
+        <a class="blog-nav-item active" href="/">Home</a>
+        <a class="blog-nav-item" href="#">New features</a>
+        <a class="blog-nav-item" href="#">Press</a>
+        <a class="blog-nav-item" href="#">New hires</a>
+        <a class="blog-nav-item" href="#">About</a>
+      </nav>
+    </div>
+  </div>
 
-<%= yield %>
+  <% if controller_name == "welcome" %>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p class="lead blog-description">This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="container" style="min-height:600px;">
+    <%= yield %>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">&copy; Company 2014</p>
+    </div>
+  </footer>
+
+
+  <%= yield :page_javascript %>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      window['rangy'].initialized = false;
+
+      $('.wysihtml5').each(function(i, elem) {
+        $(elem).wysihtml5();
+      });
+    })
+  </script>
 
 </body>
 </html>
