@@ -38,6 +38,10 @@ gem 'font-awesome-sass'
 # Bootstrap wysihtml5 for Rails
 gem 'bootstrap-wysihtml5-rails'
 
+gem 'htmlentities', '~> 4.3.3'
+
+gem 'devise', github: 'plataformatec/devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

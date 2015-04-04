@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    :confirmations => "confirmations"
+  }
+  # devise_for :users, :controllers => { :registrations => "registrations" }
   resources :articles
   get 'welcome/index'
   root 'welcome#index'

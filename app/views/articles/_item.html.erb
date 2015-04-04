@@ -1,0 +1,8 @@
+<div class="blog-post">
+  <h2 class="blog-post-title"><%= item.title %></h2>
+  <p class="blog-post-meta"><%= item.title %>January 1, 2014 by <a href="#">Mark</a></p>
+
+  <p><%= item.subject %></p>
+  <hr>
+  <%= HTMLEntities.new.decode(item.text).html_safe %>
+</div>
